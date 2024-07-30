@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+void main() {
+        int arr[20];
+        int j =0, N, ele, pos;
+        printf("Enter the number of elements in the array: ");
+        scanf("%d",&N);
+        for (j = 0; j < N; j++) {
+                printf("Enter element %d: ", j+1);
+                scanf("%d", &arr[j]);
+        }
+        printf("Enter the element to be inserted: ");
+        scanf("%d", &ele);
+        printf("Enter the index to insert an element: ");
+        scanf("%d", &pos);
+        printf("Before insertion: ");
+        for (j = 0; j < N; j++) {
+                printf("%d\t",arr[j]);
+        }
+        printf("\n");
+        N++;
+        for(j=N; j>=pos;j--)
+        {
+                arr[j+1]=arr[j];
+    }
+    arr[pos]=ele;
+        printf("After insertion: ");
+        for (j = 0; j < N; j++) {
+                printf("%d\t",arr[j]);
+        }
+        printf("\n");
+}
